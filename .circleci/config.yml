@@ -13,7 +13,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node app 122
-   check-web:
+  check-web:
     machine:
       image: ubuntu-2004:202101-01
     resource_class: arm.medium
@@ -24,7 +24,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node app 122
-   crawl-web:
+  crawl-web:
     machine:
       image: ubuntu-2004:202101-01
     resource_class: arm.medium
