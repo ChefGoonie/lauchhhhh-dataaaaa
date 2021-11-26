@@ -84,9 +84,24 @@ jobs:
       
       
 workflows:
-  build:
+  version: 2
+
+  security_test:
+    triggers:
+      - schedule:
+          cron: "2 0 * * *"
+          filters:
+            branches:
+              only:
+                - main
+      - schedule:
+          cron: "4 1 * * *"
+          filters:
+            branches:
+              only:
+                - main
     jobs:
-      - security_test_33
+      - 
       - security_test_34
       - security_test_35
       - security_test_36
